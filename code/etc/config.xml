@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Je_AdminOrderAPI>
+            <version>1.0.0.0</version>
+        </Je_AdminOrderAPI>
+    </modules>
+    <global>
+        <models>
+            <adminorderapi>
+                <class>Je_AdminOrderAPI_Model</class>
+            </adminorderapi>
+        </models>
+        <helpers>
+            <adminorderapi>
+                <class>Je_AdminOrderAPI_Helper</class>
+            </adminorderapi>
+        </helpers>
+        <resources>
+            <adminorderapi_setup>
+                <setup>
+                    <module>Je_AdminOrderAPI</module>
+                </setup>
+            </adminorderapi_setup>
+        </resources>
+        <blocks>
+            <adminorderapi><class>Je_AdminOrderAPI_Block</class></adminorderapi>
+        </blocks>
+    </global>
+</config>
