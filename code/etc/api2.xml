@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<config>
+    <api2>
+        <resource_groups>
+            <sales translate="title" module="api2">
+                <title>Sales</title>
+                <sort_order>130</sort_order>
+                <children>
+                    <sales_order translate="title" module="api2">
+                        <title>Admin Order</title>
+                        <sort_order>150</sort_order>
+                    </sales_order>
+                </children>
+            </sales>
+        </resource_groups>
+        <resources>
+            <adminorder translate="title" module="api2">
+                <group>sales</group>
+                <sort_order>10</sort_order>
+                <model>adminorderapi/order</model>
+                <title>Admin Orders</title>
+                <privileges>
+                    <admin>
+                        <create>1</create>                    
+                    </admin>
+                </privileges>
+                <routes>
+                    <route_entity>
+                        <route>/admin/orders/:id</route>
+                        <action_type>entity</action_type>
+                    </route_entity>
+                </routes>
+                <versions>1</versions>
+            </adminorder>
+        </resources>
+    </api2>
+</config>
